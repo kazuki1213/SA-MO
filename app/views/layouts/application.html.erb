@@ -93,21 +93,16 @@
       <!-- * Android Add to Home Action Sheet -->
       <!-- App Bottom Menu -->
       <div class="appBottomMenu">
-          <a href="index.html" class="item">
+          <%= link_to root_path, class: 'item' do %>
               <div class="col">
                   <ion-icon name="home-outline"></ion-icon>
               </div>
-          </a>
-          <a href="page-chat.html" class="item">
+          <% end %>
+          <%= link_to user_path, class: 'item' do %>
               <div class="col">
                   <ion-icon name="person-outline"></ion-icon>
               </div>
-          </a>
-          <a href="app-pages.html" class="item">
-              <div class="col">
-                  <ion-icon name="settings-outline"></ion-icon>
-              </div>
-          </a>
+          <% end %>
       </div>
       <!-- * App Bottom Menu -->
       <!-- App Sidebar -->
