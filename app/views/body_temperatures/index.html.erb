@@ -21,8 +21,10 @@
         <br>
         <div class='row'>
             <div class="col-12">
-                <%= image_tag 'buttons/team_btn.png', class:"rounded mx-auto d-block" %>
-                <h4 class="blockquote text-center">チームを作成</h4>
+                <%= link_to new_group_path do %>
+                    <%= image_tag 'buttons/team_btn.png', class:"rounded mx-auto d-block" %>
+                    <h4 class="blockquote text-center">チームを作成</h4>
+                <% end %>
             </div>
         </div>
     </div>
