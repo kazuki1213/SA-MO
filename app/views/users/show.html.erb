@@ -1,6 +1,12 @@
-<%= @user.name %><br />
-<%= @user.email %><br />
-<%= @user.gender %><br/>
-<%= @user.age %><br/>
-<%= @user.height %><br/>
-<%= @user.weight %><br/>
+<div class="section full mt-2 mb-2">
+    <div class="wide-block pt-2 pb-2">
+        <%= image_tag @user.image %><br />
+        <%= @user.name %><br />
+        <%= @user.email %><br />
+        <%= @user.gender %><br/>
+        <%= @user.age %><br/>
+        <%= @user.height %><br/>
+        <%= @user.weight %><br/>
+        <%= link_to "編集する", edit_user_path %>
+    </div>
+</div>
