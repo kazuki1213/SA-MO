@@ -3,19 +3,26 @@
     <div class="wide-block pt-2 pb-2">
         <div class='row'>
             <div class="col-12">
-                <%= link_to '体温を入力する', new_user_body_temperature_path, class:'btn btn-success btn-lg btn-block' %>
+                <%= link_to new_user_body_temperature_path do %>
+                    <%= image_tag 'buttons/add_btn.png', class:"rounded mx-auto d-block"%>
+                    <h4 class="blockquote text-center">体温を入力</h4>
+                <% end %>
             </div>
         </div>
         <br>
         <div class='row'>
             <div class="col-12">
-                <%= link_to '体温を修正する', new_user_body_temperature_path, class:'btn btn-danger btn-lg btn-block' %>
+                <%= link_to new_user_body_temperature_path do%>
+                    <%= image_tag 'buttons/edit_btn.png', class:"rounded mx-auto d-block" %>
+                    <h4 class="blockquote text-center">体温を修正</h4>
+                <% end %>
             </div>
         </div>
         <br>
         <div class='row'>
             <div class="col-12">
-                <a href="app-pages.html" class="btn btn-primary btn-lg btn-block">チームを作成する</a>
+                <%= image_tag 'buttons/team_btn.png', class:"rounded mx-auto d-block" %>
+                <h4 class="blockquote text-center">チームを作成</h4>
             </div>
         </div>
     </div>
