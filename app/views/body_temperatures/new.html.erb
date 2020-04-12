@@ -1,6 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-6 col-xs-12">
-		</div>
+<div class="section full mt-2 mb-2">
+  <div class="section-title">Home</div>
+  <div class="wide-block pt-2 pb-2">
+    <div class='row'>
+      <div class="col-12">
+        <%= form_for @body_temperature, url: {action: "create"} do |f| %>
+          <div class="form-group boxed">
+              <div class="input-wrapper">
+                <label class="label" for="name1">体温</label>
+                <%= f.text_field :body_temperature, class:'form-control', id:'bt', placeholder:'体温を入力してください' %>
+                <i class="clear-input">
+                    <ion-icon name="close-circle"></ion-icon>
+                </i>
+              </div>
+          </div>
+          <div class="form-group boxed">
+              <div class="input-wrapper">
+                <label class="label" for="name1">コメント</label>
+                <%= f.text_area :comment, class:'form-control', id:'bt', placeholder:'体調について特記事項' %>
+                <i class="clear-input">
+                  <ion-icon name="close-circle"></ion-icon>
+                </i>
+              </div>
+          </div>
+          <%= f.submit "登録する", class:'btn btn-primary btn-lg btn-block' %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
