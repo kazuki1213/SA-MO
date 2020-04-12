@@ -26,8 +26,7 @@ class GroupsController < ApplicationController
     redirect_to group_path(current_user.group_id)
   end
 
-  def send_mail(user)
-    @user = user
+  def send_mail
     # InquiryMailer.send_mail(user).deliver_now
   end
 

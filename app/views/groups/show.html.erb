@@ -12,7 +12,7 @@
     <% @users.each do |user| %>
       <p class="font-weight-bold mb-0 mt-2"><%= user.name %></p>
       <span><%= user.email %></span>
-      <%= link_to 'アラート', send_mail_groups_path(user), class: 'btn-sm btn-danger' %>
+      <%= link_to 'アラート', send_mail_groups_path, class: 'btn-sm btn-danger' %>
     <% end %>
 
   </div>
