@@ -1,0 +1,15 @@
+<div class="section full mt-2 mb-2">
+  <div class="m-2">
+    <%= form_for(@group) do |form| %>
+      <div class="form-group">
+        <%= form.label :チーム名 %>
+        <%= form.text_field :name, class: 'form-control' %>
+        <%= form.hidden_field(:user_id, :value => current_user.id) %>
+        <%= form.hidden_field(:role_id, :value => current_user.id) %>
+      </div>
+      <div class="actions">
+        <%= form.submit 'チーム作成', class: 'btn btn-dark mx-auto d-block' %>
+      </div>
+    <% end %>
+  </div>
+</div>
