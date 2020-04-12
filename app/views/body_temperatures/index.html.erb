@@ -1,31 +1,22 @@
 <div class="section full mt-2 mb-2">
-    <div class="section-title">How to use it?</div>
+    <div class="section-title">Home</div>
     <div class="wide-block pt-2 pb-2">
-        <h5>Prepare</h5>
-        <p>
-            Don't forget to paste the html codes of modals on the html page you want to use.
-        </p>
-
-        <h5>Show everytime</h5>
-        <p>You can show with <code>AddtoHome();</code> javascript code.</p>
-
-        <h5>Show after a delay</h5>
-        <p>
-            You can set the delay to show the modal.
-            <code>AddtoHome("3000");</code>
-            <br>
-            This code shows the modal after <strong>3 seconds</strong>. Change according to what you want.
-        </p>
-
-        <h5>Show only once</h5>
-        <p>
-            Show the modal only once to users.
-            <code>AddtoHome(3000, "once");</code>
-            <br>
-            This code shows the modal after <strong>3 seconds</strong>.
-            it works only once, does not disturb users.
-            Note: you must define the delay, otherwise It will not work.
-        </p>
-
+        <div class='row'>
+            <div class="col-12">
+                <%= link_to '体温を入力する', new_user_body_temperature_path, class:'btn btn-success btn-lg btn-block' %>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-12">
+                <%= link_to '体温を修正する', new_user_body_temperature_path, class:'btn btn-danger btn-lg btn-block' %>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-12">
+                <a href="app-pages.html" class="btn btn-primary btn-lg btn-block">チームを作成する</a>
+            </div>
+        </div>
     </div>
 </div>
