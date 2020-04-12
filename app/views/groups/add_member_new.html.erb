@@ -1,0 +1,10 @@
+<div class="section full mt-2 mb-2">
+  <div class="m-2">
+    <%= form_tag(add_member_create_groups_path, method: :post) do %>
+      <div class="form-group">
+        <%= label_tag :メールアドレス %>
+        <%= text_field_tag :email, '', class: 'form-control' %>
+        <%= submit_tag "追加", class: 'btn btn-dark mx-auto d-block mt-2' %>
+    <% end %>
+  </div>
+</div>

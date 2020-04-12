@@ -1,0 +1,19 @@
+<div class="section full mt-2 mb-2">
+  <div class="m-2">
+    <span class="font-weight-bold">
+      <%= @group.name %>
+    </span>
+    <div>チームリーダー : <%= current_user.name %></div>
+  </div>
+  <%= link_to 'メンバー追加', add_member_new_groups_path, class: 'btn btn-dark ml-2' %>
+
+  <div class="wide-block pt-2 pb-2 mt-3">
+    <p>チームメンバー</p>
+    <% @users.each do |user| %>
+      <p class="font-weight-bold mb-0 mt-2"><%= user.name %></p>
+      <span><%= user.email %></span>
+      <%= link_to 'アラート', send_mail_groups_path(user), class: 'btn-sm btn-danger' %>
+    <% end %>
+
+  </div>
+</div>

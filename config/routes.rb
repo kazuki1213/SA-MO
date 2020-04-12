@@ -9,4 +9,13 @@ Rails.application.routes.draw do
     resources :body_temperatures do
     end
   end
+  resources :groups do
+    collection do
+      get :add_member_new
+      post :add_member_create
+      get :send_mail
+    end
+    resources :users do
+    end
+  end
 end
