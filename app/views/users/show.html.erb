@@ -1,6 +1,30 @@
-<%= @user.name %><br />
-<%= @user.email %><br />
-<%= @user.gender %><br/>
-<%= @user.age %><br/>
-<%= @user.height %><br/>
-<%= @user.weight %><br/>
+<div class="section full mt-2 mb-2">
+  <div class="wide-block pt-2 pb-2">
+    <div class='row'>
+      <div class="col-6 align-self-center">
+        <div class="text-center">
+          <%= image_tag @user.image %>
+        </div>
+      </div>
+      <div class="col-6">
+        <div>
+          <%= @user.name %>
+        </div>
+        <div>
+          <%= @user.email %>
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="label" for="name1">性別</label>
+        <%= @user.gender %><br/>
+        <label class="label" for="name1">年齢</label>
+        <%= @user.age %><br/>
+        <label class="label" for="name1">身長</label>
+        <%= @user.height %><br/>
+        <label class="label" for="name1">体重</label>
+        <%= @user.weight %><br/>
+        <%= link_to "編集する", edit_user_path, class:'btn btn-primary btn-lg btn-block'  %>
+        </div>
+    </div>
+  </div>
+</div>
