@@ -10,4 +10,6 @@ require("channels")
 
 import '../stylesheets/application'
 import './bootstrap_custom.js'
+import 'owl.carousel/dist/assets/owl.carousel.css'
+// import 'owl.carousel/dist/owl.carousel.js'
 import './base.js'
