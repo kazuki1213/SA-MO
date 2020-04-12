@@ -1,2 +1,0 @@
-class BodyTemperatureController < ApplicationController
-end
