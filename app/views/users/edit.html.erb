@@ -1,0 +1,14 @@
+<%= @user.name %><br />
+<%= @user.email %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :gender %>
+  <%= f.select :gender, User.genders.keys.map {|k| [k, k]} %><br />
+  <%= f.label :age %>
+  <%= f.text_field :age %><br />
+  <%= f.label :height %>
+  <%= f.text_field :height %><br />
+  <%= f.label :weight %>
+  <%= f.text_field :weight %><br />
+  <%= f.submit %>
+<% end %>
