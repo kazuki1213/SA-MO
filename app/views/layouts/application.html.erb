@@ -100,10 +100,12 @@
                   <ion-icon name="home-outline"></ion-icon>
               </div>
           <% end %>
-          <%= link_to user_path, class: 'item' do %>
-              <div class="col">
-                  <ion-icon name="person-outline"></ion-icon>
-              </div>
+          <% if current_user %>
+            <%= link_to user_path, class: 'item' do %>
+                <div class="col">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            <% end %>
           <% end %>
       </div>
       <!-- * App Bottom Menu -->
