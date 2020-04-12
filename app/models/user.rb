@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable
   has_many :body_temperatures, dependent: :destroy
 
-  enum gender: [:male, :female, :other]
+  enum gender: ['男性', '女性', 'その他']
 
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
