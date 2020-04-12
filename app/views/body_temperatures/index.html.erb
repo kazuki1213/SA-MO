@@ -3,6 +3,43 @@
     <div class="wide-block pt-2 pb-2">
         <div class='row'>
             <div class="col-12">
+                <canvas id="myChart" width="400" height="250"></canvas>
+                <br>
+                <script>
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['4-1', '4-2', '4-3', '4-4', '4-5', '4-6'],
+                            datasets: [{
+                                data: [35.0, 36.3, 36, 38, 39, 38],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: false,
+                                        min: 33,
+                                        max: 40
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-12">
                 <%= link_to new_user_body_temperature_path do %>
                     <%= image_tag 'buttons/add_btn.png', class:"rounded mx-auto d-block"%>
                     <h4 class="blockquote text-center">体温を入力</h4>
