@@ -1,6 +1,6 @@
 class BodyTemperaturesController < ApplicationController
   def index
-    @user = User.find(1)
+    @user = User.find(current_user.id)
   end
 
   def new
