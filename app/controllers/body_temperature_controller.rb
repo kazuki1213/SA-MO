@@ -1,0 +1,2 @@
+class BodyTemperatureController < ApplicationController
+end
